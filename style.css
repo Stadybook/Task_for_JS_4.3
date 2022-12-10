@@ -1,0 +1,129 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, ul, li
+ {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ul {
+	list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:#1B1C21;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+button:hover{
+    cursor: pointer;
+}
+
+html{
+    box-sizing: border-box;
+  }
+  *, *::before, *::after{
+        box-sizing: inherit;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url(../font/Roboto-Regular.eot);
+    src: local('Roboto'),
+    url(../font/Roboto-Regular.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+body{
+    font-family: 'Roboto';
+    background-color:  #C4C4C4;
+}
+
+.container{
+  padding: 62px 84px 72px 77px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+   
+}
+
+.search__input{
+    font-size: 48px;
+    width: 500px;
+    height: 61px;
+    padding: 5px 0 0 13px;
+}
+
+.search__item{
+    font-size: 30px;
+    min-width: 500px;
+    min-height: 61px;
+    padding-left: 0px 0px 9px 13px;
+    border: 2px solid #000000;
+}
+
+.selected{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 45px;   
+   
+}
+
+.selected__item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    line-height: 28px;
+    width: 503px;
+    height: 101px;
+    padding: 8px 34px 8px 16px;
+    background-color: #E27BEB;
+    border: 1px solid #000000;
+   
+}
+.btn{
+    position: relative;
+   /* background-image:url();*/
+    width: 42px;
+    height: 38px;
+    left: 420px;
+    bottom: 60px;
+}
+/*
+.btn::before{
+    position: absolute;
+    content: "x";
+    font-size: 70px;
+    position: relative;
+    color: #FF0000;
+}
+*/
+.btn:before, .btn:after {
+    position: absolute;
+    top: -12px;
+    left:5px;
+    content: ' ';
+    height: 60px;
+    width: 4px;
+    background-color:#FF0000;
+  }
+  .btn:before {
+    transform: rotate(45deg);
+  }
+  .btn:after {
+    transform: rotate(-45deg);
+  }
