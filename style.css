@@ -38,9 +38,9 @@ html{
 
   @font-face {
     font-family: 'Roboto';
-    src: url(../font/Roboto-Regular.eot);
+    src: url(font/Roboto-Regular.eot);
     src: local('Roboto'),
-    url(../font/Roboto-Regular.woff) format('woff');
+    url(font/Roboto-Regular.woff) format('woff');
     font-weight: normal;
     font-style: normal;
     }
