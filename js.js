@@ -23,7 +23,7 @@ async function promtInTemplate(){
     let entry = template.value;
     if (entry === '') {
     clean(list)
-    return// без этого ошибка после очищения поля
+    return
     }
     gitHub.searchParams.append('q', entry)
     try {
@@ -54,13 +54,12 @@ function showResults(gits) {
         let owner = gits[i].owner.login
         let stars = gits[i].stargazers_count
     
-        let item = `<div class="search__item" data-owner='${owner}' data-stars='${stars}'>${name}</div>`
+        let item = `<div class="search__item" data-name='${name}' data-owner='${owner}' data-stars='${stars}'>${name}</div>`
         list.innerHTML += item
     }   
 }
 
 list.addEventListener('click', function(e){
-    console.log(e.target)
     addRepository(e.target)
 })
 
@@ -72,14 +71,13 @@ selectedRepositories.addEventListener('click', function(e){
 
 
 function addRepository(target) {
-    let name = target.textContent
+    let name = target.dataset.name
     let owner = target.dataset.owner
     let stars = target.dataset.stars
 
     selectedRepositories.innerHTML += `<div class="selected__item">Name: ${name}<br>Owner: ${owner}<br>Stars: ${stars} <button class="btn"></button></div>`
     clean(list)
     template.value = ''
-
 }
 
 
