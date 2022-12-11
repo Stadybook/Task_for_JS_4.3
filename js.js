@@ -20,17 +20,17 @@ template.addEventListener('input', debounce(promtInTemplate,350))
 
 
 async function promtInTemplate(){
-    let entry = template.value;
+    let entry = template.value
     if (entry === '') {
     clean(list)
     return
     }
     gitHub.searchParams.append('q', entry)
     try {
-        let response = await fetch(gitHub);
+        let response = await fetch(gitHub)
         if (response.ok) {
-            let gits = await response.json();
-            showResults(gits.items);
+            let gits = await response.json()
+            showResults(gits.items)
         }
         else {
             console.log('null')
