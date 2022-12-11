@@ -66,7 +66,7 @@ list.addEventListener('click', function(e){
 selectedRepositories.addEventListener('click', function(e){
     if (!e.target.classList.contains('btn')) return
 
-    e.target.parentElement.remove();  
+    e.target.parentElement.remove()
 })
 
 
