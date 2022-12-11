@@ -97,21 +97,12 @@ body{
 }
 .btn{
     position: relative;
-   /* background-image:url();*/
     width: 42px;
     height: 38px;
     left: 420px;
     bottom: 60px;
 }
-/*
-.btn::before{
-    position: absolute;
-    content: "x";
-    font-size: 70px;
-    position: relative;
-    color: #FF0000;
-}
-*/
+
 .btn:before, .btn:after {
     position: absolute;
     top: -12px;
