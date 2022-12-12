@@ -33,12 +33,11 @@ async function promtInTemplate(){
             showResults(gits.items)
         }
         else {
-            console.log('null')
-            return null
+            console.log('Error')
         }
       } 
     catch(error) {
-        return null;
+        console.log(error)
     }
 }
 
